@@ -1,0 +1,62 @@
+vijeesh@5CD1220VXV:~$ pwd
+/home/vijeesh
+vijeesh@5CD1220VXV:~$ ls -la
+total 132
+drwxr-x--- 16 vijeesh   vijeesh       4096 Aug 15 23:34  .
+drwxr-xr-x  9 root      root          4096 Aug 13 12:02  ..
+-rw-------  1 vijeesh   vijeesh      11791 Aug 15 12:27  .bash_history
+-rw-r--r--  1 vijeesh   vijeesh        220 Jul 29 06:44  .bash_logout
+-rw-r--r--  1 vijeesh   vijeesh       3771 Jul 29 06:44  .bashrc
+drwx------  2 vijeesh   vijeesh       4096 Jul 29 06:44  .cache
+drwx------  3 vijeesh   vijeesh       4096 Aug  9 09:05  .config
+-rw-r--r--  1 vijeesh   vijeesh      12288 Jul 31 23:33  .file2.txt.swp
+drwxr-xr-x  2 vijeesh   vijeesh       4096 Aug  7 22:13  .landscape
+drwxr-xr-x  3 vijeesh   vijeesh       4096 Jul 31 23:29  .local
+-rw-rw-r--  1 vijeesh   vijeesh          0 Aug 22 21:47  .motd_shown
+-rw-r--r--  1 vijeesh   vijeesh        807 Jul 29 06:44  .profile
+drwx------  2 vijeesh   vijeesh       4096 Aug 15 23:34  .ssh
+-rw-r--r--  1 vijeesh   vijeesh          0 Jul 29 06:46  .sudo_as_admin_successful
+-rw-------  1 vijeesh   vijeesh        769 Jul 31 23:33  .viminfo
+-rw-------  1 vijeesh   vijeesh       3434 Aug 15 23:24  Apple@123
+-rw-r--r--  1 vijeesh   vijeesh        744 Aug 15 23:24  Apple@123.pub
+drwxr-xr-x  4 vijeesh   vijeesh       4096 Aug  9 06:51  Guvi
+drwxr-xr-x  5 vijeesh   vijeesh       4096 Aug 15 12:17  ProjectBackup
+-rw-r--r--  1 vijeesh   vijeesh      10240 Aug 15 12:21  ProjectBackup.tar
+-rw-r--r--  1 vijeesh   vijeesh        335 Aug 15 12:21  ProjectBackup.tar.gz
+drwxr-xr-x  3 vijeesh   vijeesh       4096 Aug 15 12:23  gzip_extract
+drwxr-xr-x  7 vijeesh   vijeesh       4096 Aug 15 12:08  linux_practice
+drwxr-xr-x  2 vijeesh   vijeesh       4096 Aug  9 08:39  myfolder
+drwxr-x---  2 developer project_team  4096 Aug 13 12:23  project_data
+drwxr-xr-x  2 vijeesh   vijeesh       4096 Aug  9 08:42  shilpa
+-rw-r--r--  1 vijeesh   vijeesh        317 Aug 11 07:39  system_info.txt
+drwxr-xr-x  2 vijeesh   vijeesh       4096 Aug  9 09:13  vihaan
+drwxr-xr-x  2 vijeesh   vijeesh       4096 Aug 13 12:19 '~project_data'
+vijeesh@5CD1220VXV:~$ mkdir linux-lab
+vijeesh@5CD1220VXV:~$ cd linux-lab/
+vijeesh@5CD1220VXV:~/linux-lab$ mikdir scripts logs backup
+Command 'mikdir' not found, did you mean:
+  command 'mkdir' from deb coreutils (9.4-3ubuntu6.2)
+  command 'mmkdir' from deb mblaze (1.1-1)
+Try: sudo apt install <deb name>
+vijeesh@5CD1220VXV:~/linux-lab$ mkdir scripts logs backup
+vijeesh@5CD1220VXV:~/linux-lab$ touch server.txt application.log notes.txt
+vijeesh@5CD1220VXV:~/linux-lab$ ls
+application.log  backup  logs  notes.txt  scripts  server.txt
+vijeesh@5CD1220VXV:~/linux-lab$ mv notes.txt students-notes.txt
+vijeesh@5CD1220VXV:~/linux-lab$ cp server.txt backup/
+vijeesh@5CD1220VXV:~/linux-lab$ mv application.log logs/
+vijeesh@5CD1220VXV:~/linux-lab$ rm student-notes.txt
+rm: cannot remove 'student-notes.txt': No such file or directory
+vijeesh@5CD1220VXV:~/linux-lab$ ls
+backup  logs  scripts  server.txt  students-notes.txt
+vijeesh@5CD1220VXV:~/linux-lab$ pwd
+/home/vijeesh/linux-lab
+vijeesh@5CD1220VXV:~/linux-lab$ ls -l
+total 12
+drwxr-xr-x 2 vijeesh vijeesh 4096 Aug 22 22:00 backup
+drwxr-xr-x 2 vijeesh vijeesh 4096 Aug 22 22:01 logs
+drwxr-xr-x 2 vijeesh vijeesh 4096 Aug 22 21:54 scripts
+-rw-r--r-- 1 vijeesh vijeesh    0 Aug 22 21:56 server.txt
+-rw-r--r-- 1 vijeesh vijeesh    0 Aug 22 21:56 students-notes.txt
+vijeesh@5CD1220VXV:~/linux-lab$ rm students-notes.txt
+vijeesh@5CD1220VXV:~/linux-lab$
