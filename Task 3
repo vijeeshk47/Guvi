@@ -1,0 +1,11 @@
+vijeesh@5CD1220VXV:~$ touch deploy.sh
+vijeesh@5CD1220VXV:~$ ls -l deploy.sh
+-rw-r--r-- 1 vijeesh vijeesh 0 Aug 22 22:45 deploy.sh
+vijeesh@5CD1220VXV:~$ chmod +x deploy.sh
+vijeesh@5CD1220VXV:~$ chmod u+rwx deploy.sh
+vijeesh@5CD1220VXV:~$ chmod g+rx deploy.sh
+vijeesh@5CD1220VXV:~$ chmod g-w deploy.sh
+vijeesh@5CD1220VXV:~$ chmod o-rwx deploy.sh
+vijeesh@5CD1220VXV:~$ ls -l deploy.sh
+-rwxr-x--- 1 vijeesh vijeesh 0 Aug 22 22:45 deploy.sh
+vijeesh@5CD1220VXV:~$
