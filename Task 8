@@ -1,0 +1,49 @@
+vijeesh@5CD1220VXV:~$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.651 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.058 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.057 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.058 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.050 ms
+64 bytes from 127.0.0.1: icmp_seq=6 ttl=64 time=0.063 ms
+64 bytes from 127.0.0.1: icmp_seq=7 ttl=64 time=0.116 ms
+64 bytes from 127.0.0.1: icmp_seq=8 ttl=64 time=0.057 ms
+64 bytes from 127.0.0.1: icmp_seq=9 ttl=64 time=0.064 ms
+^C
+--- 127.0.0.1 ping statistics ---
+9 packets transmitted, 9 received, 0% packet loss, time 7996ms
+rtt min/avg/max/mdev = 0.050/0.130/0.651/0.184 ms
+vijeesh@5CD1220VXV:~$ GATEWAY=$(ip route show default | awk '{print $3}')
+vijeesh@5CD1220VXV:~$ ping $GATEWAY
+PING 172.22.16.1 (172.22.16.1) 56(84) bytes of data.
+^C
+--- 172.22.16.1 ping statistics ---
+38 packets transmitted, 0 received, 100% packet loss, time 37171ms
+
+vijeesh@5CD1220VXV:~$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=13.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=12.5 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=13.7 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=13.2 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=12.8 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=117 time=13.4 ms
+64 bytes from 8.8.8.8: icmp_seq=7 ttl=117 time=13.0 ms
+64 bytes from 8.8.8.8: icmp_seq=8 ttl=117 time=12.8 ms
+^C
+--- 8.8.8.8 ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 6997ms
+rtt min/avg/max/mdev = 12.532/13.167/13.844/0.429 ms
+vijeesh@5CD1220VXV:~$ ping google.com
+PING google.com (142.250.67.46) 56(84) bytes of data.
+64 bytes from pnmaaa-bb-in-f14.1e100.net (142.250.67.46): icmp_seq=1 ttl=117 time=11.3 ms
+64 bytes from pnmaaa-bb-in-f14.1e100.net (142.250.67.46): icmp_seq=2 ttl=117 time=12.7 ms
+64 bytes from pnmaaa-bb-in-f14.1e100.net (142.250.67.46): icmp_seq=3 ttl=117 time=13.1 ms
+64 bytes from pnmaaa-bb-in-f14.1e100.net (142.250.67.46): icmp_seq=4 ttl=117 time=13.2 ms
+64 bytes from pnmaaa-bb-in-f14.1e100.net (142.250.67.46): icmp_seq=5 ttl=117 time=13.0 ms
+64 bytes from pnmaaa-bb-in-f14.1e100.net (142.250.67.46): icmp_seq=6 ttl=117 time=13.2 ms
+^C
+--- google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 4997ms
+rtt min/avg/max/mdev = 11.297/12.757/13.215/0.675 ms
+vijeesh@5CD1220VXV:~$
