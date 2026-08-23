@@ -1,0 +1,156 @@
+vijeesh@5CD1220VXV:~$ nslookup google.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 142.250.205.142
+Name:   google.com
+Address: 2404:6800:4007:805::200e
+
+vijeesh@5CD1220VXV:~$ nslookup github.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   github.com
+Address: 20.207.73.82
+
+vijeesh@5CD1220VXV:~$ nslookup microsoft.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   microsoft.com
+Address: 150.171.110.84
+Name:   microsoft.com
+Address: 2603:1061:14:154::1
+
+vijeesh@5CD1220VXV:~$ dig google.com A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> google.com A
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42238
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.com.                    IN      A
+
+;; ANSWER SECTION:
+google.com.             28      IN      A       142.250.205.142
+
+;; Query time: 30 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Sun Aug 23 12:33:46 PDT 2026
+;; MSG SIZE  rcvd: 55
+
+vijeesh@5CD1220VXV:~$ dig google.com AAAA
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> google.com AAAA
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44644
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.com.                    IN      AAAA
+
+;; ANSWER SECTION:
+google.com.             141     IN      AAAA    2404:6800:4007:80b::200e
+
+;; Query time: 12 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Sun Aug 23 12:34:01 PDT 2026
+;; MSG SIZE  rcvd: 67
+
+vijeesh@5CD1220VXV:~$ dig github.com A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> github.com A
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57105
+;; flags: qr rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;github.com.                    IN      A
+
+;; ANSWER SECTION:
+github.com.             7       IN      A       20.207.73.82
+
+;; Query time: 17 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Sun Aug 23 12:34:17 PDT 2026
+;; MSG SIZE  rcvd: 55
+
+vijeesh@5CD1220VXV:~$ dig github.com AAAA
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> github.com AAAA
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 5979
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;github.com.                    IN      AAAA
+
+;; AUTHORITY SECTION:
+github.com.             871     IN      SOA     ns-1707.awsdns-21.co.uk. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400
+
+;; Query time: 30 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Sun Aug 23 12:34:25 PDT 2026
+;; MSG SIZE  rcvd: 123
+
+vijeesh@5CD1220VXV:~$ dig microsoft.com A
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> microsoft.com A
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14822
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;microsoft.com.                 IN      A
+
+;; ANSWER SECTION:
+microsoft.com.          719     IN      A       150.171.110.84
+
+;; Query time: 12 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Sun Aug 23 12:35:04 PDT 2026
+;; MSG SIZE  rcvd: 58
+
+vijeesh@5CD1220VXV:~$ dig microsoft.com AAAA
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.6-Ubuntu <<>> microsoft.com AAAA
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21257
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;microsoft.com.                 IN      AAAA
+
+;; ANSWER SECTION:
+microsoft.com.          962     IN      AAAA    2603:1061:14:154::1
+
+;; Query time: 30 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Sun Aug 23 12:35:15 PDT 2026
+;; MSG SIZE  rcvd: 70
+
+vijeesh@5CD1220VXV:~$
