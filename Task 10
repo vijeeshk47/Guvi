@@ -1,0 +1,44 @@
+vijeesh@5CD1220VXV:~$ sudo ss -tlnp
+[sudo] password for vijeesh:
+State            Recv-Q           Send-Q                       Local Address:Port                        Peer Address:Port           Process
+LISTEN           0                1000                        10.255.255.254:53                               0.0.0.0:*
+
+LISTEN           0                4096                            127.0.0.54:53                               0.0.0.0:*               users:(("systemd-resolve",pid=133,fd=17))
+LISTEN           0                511                                0.0.0.0:80                               0.0.0.0:*               users:(("nginx",pid=229,fd=5),("nginx",pid=228,fd=5),("nginx",pid=227,fd=5),("nginx",pid=226,fd=5),("nginx",pid=225,fd=5),("nginx",pid=224,fd=5),("nginx",pid=223,fd=5),("nginx",pid=222,fd=5),("nginx",pid=221,fd=5))
+LISTEN           0                4096                             127.0.0.1:44109                            0.0.0.0:*               users:(("containerd",pid=245,fd=14))
+LISTEN           0                4096                         127.0.0.53%lo:53                               0.0.0.0:*               users:(("systemd-resolve",pid=133,fd=15))
+LISTEN           0                511                                   [::]:80                                  [::]:*               users:(("nginx",pid=229,fd=6),("nginx",pid=228,fd=6),("nginx",pid=227,fd=6),("nginx",pid=226,fd=6),("nginx",pid=225,fd=6),("nginx",pid=224,fd=6),("nginx",pid=223,fd=6),("nginx",pid=222,fd=6),("nginx",pid=221,fd=6))
+vijeesh@5CD1220VXV:~$ sudo ss -ulnp
+State      Recv-Q     Send-Q          Local Address:Port         Peer Address:Port    Process
+UNCONN     0          0                  127.0.0.54:53                0.0.0.0:*        users:(("systemd-resolve",pid=133,fd=16))
+UNCONN     0          0               127.0.0.53%lo:53                0.0.0.0:*        users:(("systemd-resolve",pid=133,fd=14))
+UNCONN     0          0              10.255.255.254:53                0.0.0.0:*
+UNCONN     0          0                   127.0.0.1:323               0.0.0.0:*
+UNCONN     0          0                       [::1]:323                  [::]:*
+vijeesh@5CD1220VXV:~$ sudo ss -tulnp
+Netid         State          Recv-Q         Send-Q                   Local Address:Port                    Peer Address:Port         Process
+udp           UNCONN         0              0                           127.0.0.54:53                           0.0.0.0:*             users:(("systemd-resolve",pid=133,fd=16))
+udp           UNCONN         0              0                        127.0.0.53%lo:53                           0.0.0.0:*             users:(("systemd-resolve",pid=133,fd=14))
+udp           UNCONN         0              0                       10.255.255.254:53                           0.0.0.0:*
+
+udp           UNCONN         0              0                            127.0.0.1:323                          0.0.0.0:*
+
+udp           UNCONN         0              0                              0.0.0.0:42915                        0.0.0.0:*
+ users:(("systemd-timesyn",pid=136,fd=13))
+udp           UNCONN         0              0                                [::1]:323                             [::]:*
+
+tcp           LISTEN         0              1000                    10.255.255.254:53                           0.0.0.0:*
+
+tcp           LISTEN         0              4096                        127.0.0.54:53                           0.0.0.0:*
+ users:(("systemd-resolve",pid=133,fd=17))
+tcp           LISTEN         0              511                            0.0.0.0:80                           0.0.0.0:*
+ users:(("nginx",pid=229,fd=5),("nginx",pid=228,fd=5),("nginx",pid=227,fd=5),("nginx",pid=226,fd=5),("nginx",pid=225,fd=5),("nginx",pid=224,fd=5),("nginx",pid=223,fd=5),("nginx",pid=222,fd=5),("nginx",pid=221,fd=5))
+tcp           LISTEN         0              4096                         127.0.0.1:44109                        0.0.0.0:*
+ users:(("containerd",pid=245,fd=14))
+tcp           LISTEN         0              4096                     127.0.0.53%lo:53                           0.0.0.0:*
+ users:(("systemd-resolve",pid=133,fd=15))
+tcp           LISTEN         0              511                               [::]:80                              [::]:*
+ users:(("nginx",pid=229,fd=6),("nginx",pid=228,fd=6),("nginx",pid=227,fd=6),("nginx",pid=226,fd=6),("nginx",pid=225,fd=6),("nginx",pid=224,fd=6),("nginx",pid=223,fd=6),("nginx",pid=222,fd=6),("nginx",pid=221,fd=6))
+vijeesh@5CD1220VXV:~$ sudo ss -tlnp | grep :22
+vijeesh@5CD1220VXV:~$ sudo ss -tlnp | grep :443
+vijeesh@5CD1220VXV:~$
