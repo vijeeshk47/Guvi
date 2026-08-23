@@ -1,0 +1,81 @@
+vijeesh@5CD1220VXV:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  21764 13268 ?        Ss   21:43   0:01 /sbin/init
+root           2  0.0  0.0   3180  2204 hvc0     Sl+  21:43   0:00 /init
+root           6  0.0  0.0   3196  2132 hvc0     Sl+  21:43   0:00 plan9 --control-socket 7 --log-level 4 --
+root          55  0.0  0.2  66832 16044 ?        S<s  21:43   0:01 /usr/lib/systemd/systemd-journald
+root         104  0.0  0.0  25416  6848 ?        Ss   21:43   0:01 /usr/lib/systemd/systemd-udevd
+systemd+     133  0.0  0.1  21344 13256 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     136  0.0  0.0  91036  7968 ?        Ssl  21:43   0:00 /usr/lib/systemd/systemd-timesyncd
+root         182  0.0  0.0   4244  2744 ?        Ss   21:43   0:00 /usr/sbin/cron -f -P
+message+     183  0.0  0.0   9552  5404 ?        Ss   21:43   0:00 @dbus-daemon --system --address=systemd:
+root         199  0.0  0.1  17980  8896 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd-logind
+root         221  0.0  0.0  11172  1740 ?        Ss   21:43   0:00 nginx: master process /usr/sbin/nginx -g
+www-data     222  0.0  0.0  12892  4532 ?        S    21:43   0:00 nginx: worker process
+www-data     223  0.0  0.0  12892  4532 ?        S    21:43   0:00 nginx: worker process
+www-data     224  0.0  0.0  12892  4532 ?        S    21:43   0:00 nginx: worker process
+www-data     225  0.0  0.0  12892  4532 ?        S    21:43   0:00 nginx: worker process
+www-data     226  0.0  0.0  12892  4532 ?        S    21:43   0:00 nginx: worker process
+www-data     227  0.0  0.0  12892  4532 ?        S    21:43   0:00 nginx: worker process
+www-data     228  0.0  0.0  12892  4532 ?        S    21:43   0:00 nginx: worker process
+www-data     229  0.0  0.0  12892  4468 ?        S    21:43   0:00 nginx: worker process
+syslog       244  0.0  0.0 222516  6012 ?        Ssl  21:43   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         245  0.1  0.5 1941260 46656 ?       Ssl  21:43   0:05 /usr/bin/containerd
+root         250  0.0  0.0   3124  2040 tty1     Ss+  21:43   0:00 /sbin/agetty -o -p -- \u --noclear - linu
+root         262  0.0  0.2 107040 23296 ?        Ssl  21:43   0:00 /usr/bin/python3 /usr/share/unattended-up
+root         330  0.0  1.0 2278620 80300 ?       Ssl  21:43   0:01 /usr/bin/dockerd -H fd:// --containerd=/r
+root         585  0.0  0.0   6828  4720 pts/1    Ss   21:43   0:00 /bin/login -f
+vijeesh      633  0.0  0.1  20340 11656 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd --user
+vijeesh      634  0.0  0.0  21172  3576 ?        S    21:43   0:00 (sd-pam)
+vijeesh      662  0.0  0.0   6080  5372 pts/1    S+   21:43   0:00 -bash
+root        1318  0.0  0.0   3188  1116 ?        Ss   22:28   0:00 /init
+root        1320  0.0  0.0   3204  1252 ?        S    22:28   0:00 /init
+vijeesh     1323  0.0  0.0   6212  5548 pts/0    Ss   22:28   0:00 -bash
+vijeesh     1386  100  0.0   8288  4364 pts/0    R+   22:36   0:00 ps aux
+vijeesh@5CD1220VXV:~$ ps aux | grep sshd
+vijeesh     1397  0.0  0.0   4096  2164 pts/0    S+   22:36   0:00 grep --color=auto sshd
+vijeesh@5CD1220VXV:~$ ps aux | grep bash
+vijeesh      662  0.0  0.0   6080  5372 pts/1    S+   21:43   0:00 -bash
+vijeesh     1323  0.0  0.0   6212  5548 pts/0    Ss   22:28   0:00 -bash
+vijeesh     1401  0.0  0.0   4096  2164 pts/0    S+   22:37   0:00 grep --color=auto bash
+vijeesh@5CD1220VXV:~$ sleep 1000 &
+[1] 1404
+vijeesh@5CD1220VXV:~$ pgrep sleep
+1404
+vijeesh@5CD1220VXV:~$ kill 1404
+vijeesh@5CD1220VXV:~$ pgrep sleep
+[1]+  Terminated              sleep 1000
+vijeesh@5CD1220VXV:~$ ps aux --sort=-%cpu | head
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         245  0.1  0.5 1941260 46656 ?       Ssl  21:43   0:06 /usr/bin/containerd
+root           1  0.0  0.1  21764 13268 ?        Ss   21:43   0:01 /sbin/init
+root         104  0.0  0.0  25416  6848 ?        Ss   21:43   0:01 /usr/lib/systemd/systemd-udevd
+root         330  0.0  1.0 2278620 80304 ?       Ssl  21:43   0:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          55  0.0  0.2  66832 16052 ?        S<s  21:43   0:01 /usr/lib/systemd/systemd-journald
+vijeesh     1323  0.0  0.0   6728  6076 pts/0    Ss   22:28   0:00 -bash
+root         262  0.0  0.2 107040 23296 ?        Ssl  21:43   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+systemd+     133  0.0  0.1  21344 13256 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     136  0.0  0.0  91036  7968 ?        Ssl  21:43   0:00 /usr/lib/systemd/systemd-timesyncd
+vijeesh@5CD1220VXV:~$ ps aux --sort=-%cpu | head
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         245  0.1  0.5 1941260 46656 ?       Ssl  21:43   0:06 /usr/bin/containerd
+root           1  0.0  0.1  21764 13268 ?        Ss   21:43   0:01 /sbin/init
+root         104  0.0  0.0  25416  6848 ?        Ss   21:43   0:01 /usr/lib/systemd/systemd-udevd
+root         330  0.0  1.0 2278620 80304 ?       Ssl  21:43   0:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root          55  0.0  0.2  66832 16052 ?        S<s  21:43   0:01 /usr/lib/systemd/systemd-journald
+vijeesh     1323  0.0  0.0   6728  6076 pts/0    Ss   22:28   0:00 -bash
+root         262  0.0  0.2 107040 23296 ?        Ssl  21:43   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+systemd+     133  0.0  0.1  21344 13256 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     136  0.0  0.0  91036  7968 ?        Ssl  21:43   0:00 /usr/lib/systemd/systemd-timesyncd
+vijeesh@5CD1220VXV:~$ ps aux --sort=-%mem | head
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         330  0.0  1.0 2278620 80304 ?       Ssl  21:43   0:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root         245  0.1  0.5 1941260 46656 ?       Ssl  21:43   0:06 /usr/bin/containerd
+root         262  0.0  0.2 107040 23296 ?        Ssl  21:43   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root          55  0.0  0.2  66832 16052 ?        S<s  21:43   0:01 /usr/lib/systemd/systemd-journald
+root           1  0.0  0.1  21764 13268 ?        Ss   21:43   0:01 /sbin/init
+systemd+     133  0.0  0.1  21344 13256 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd-resolved
+vijeesh      633  0.0  0.1  20340 11656 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd --user
+root         199  0.0  0.1  17980  8896 ?        Ss   21:43   0:00 /usr/lib/systemd/systemd-logind
+systemd+     136  0.0  0.0  91036  7968 ?        Ssl  21:43   0:00 /usr/lib/systemd/systemd-timesyncd
+vijeesh@5CD1220VXV:~$
