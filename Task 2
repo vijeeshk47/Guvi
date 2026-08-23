@@ -1,0 +1,31 @@
+vijeesh@5CD1220VXV:~$ nano server-info.txt
+vijeesh@5CD1220VXV:~$ cat server-info.txt
+Server Name: Linux-Server-01
+Environment: Development
+Application: Web Application
+Port: 8080
+Owner: DevOps Team
+
+vijeesh@5CD1220VXV:~$ head -n 3 server-info.txt
+Server Name: Linux-Server-01
+Environment: Development
+Application: Web Application
+vijeesh@5CD1220VXV:~$ tail -n 2 server-info.txt
+Owner: DevOps Team
+
+vijeesh@5CD1220VXV:~$ wc -l server-info.txt
+6 server-info.txt
+vijeesh@5CD1220VXV:~$ wc -w server-info.txt
+13 server-info.txt
+vijeesh@5CD1220VXV:~$ grep "DevOps" server-info.txt
+Owner: DevOps Team
+vijeesh@5CD1220VXV:~$ grep "Server" server-info.txt
+Server Name: Linux-Server-01
+vijeesh@5CD1220VXV:~$ nl -ba server-info.txt
+     1  Server Name: Linux-Server-01
+     2  Environment: Development
+     3  Application: Web Application
+     4  Port: 8080
+     5  Owner: DevOps Team
+     6
+vijeesh@5CD1220VXV:~$
