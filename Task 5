@@ -1,0 +1,188 @@
+vijeesh@5CD1220VXV:~$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       525Mi       6.9Gi       3.5Mi       351Mi       7.1Gi
+Swap:          2.0Gi          0B       2.0Gi
+vijeesh@5CD1220VXV:~$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       525Mi       6.9Gi       3.5Mi       351Mi       7.1Gi
+Swap:          2.0Gi          0B       2.0Gi
+vijeesh@5CD1220VXV:~$ lscpu
+Architecture:                x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             39 bits physical, 48 bits virtual
+  Byte Order:                Little Endian
+CPU(s):                      8
+  On-line CPU(s) list:       0-7
+Vendor ID:                   GenuineIntel
+  Model name:                11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+    CPU family:              6
+    Model:                   140
+    Thread(s) per core:      2
+    Core(s) per socket:      4
+    Socket(s):               1
+    Stepping:                1
+    BogoMIPS:                4838.39
+    Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush
+                              mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon
+                              rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclm
+                             ulqdq vmx ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadli
+                             ne_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ib
+                             rs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1
+                              avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflus
+                             hopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves vnmi
+                              avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg av
+                             x512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect md_clear ibt fl
+                             ush_l1d arch_capabilities
+Virtualization features:
+  Virtualization:            VT-x
+  Hypervisor vendor:         Microsoft
+  Virtualization type:       full
+Caches (sum of all):
+  L1d:                       192 KiB (4 instances)
+  L1i:                       128 KiB (4 instances)
+  L2:                        5 MiB (4 instances)
+  L3:                        8 MiB (1 instance)
+NUMA:
+  NUMA node(s):              1
+  NUMA node0 CPU(s):         0-7
+Vulnerabilities:
+  Gather data sampling:      Not affected
+  Ghostwrite:                Not affected
+  Indirect target selection: Mitigation; Aligned branch/return thunks
+  Itlb multihit:             Not affected
+  L1tf:                      Not affected
+  Mds:                       Not affected
+  Meltdown:                  Not affected
+  Mmio stale data:           Not affected
+  Old microcode:             Not affected
+  Reg file data sampling:    Not affected
+  Retbleed:                  Mitigation; Enhanced IBRS
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequenc
+                             e; BHI SW loop, KVM SW loop
+  Srbds:                     Not affected
+  Tsa:                       Not affected
+  Tsx async abort:           Not affected
+  Vmscape:                   Not affected
+vijeesh@5CD1220VXV:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         476G   90G  387G  19% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.5G  954G   1% /
+none            3.9G   40K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.8G  2.8M  3.8G   1% /init
+none            3.9G  540K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G     0  3.9G   0% /run/shm
+none            3.9G   80K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             476G   90G  387G  19% /mnt/c
+tmpfs           779M   20K  779M   1% /run/user/1000
+vijeesh@5CD1220VXV:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         476G   90G  387G  19% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.5G  954G   1% /
+none            3.9G   40K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.8G  2.8M  3.8G   1% /init
+none            3.9G  540K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G     0  3.9G   0% /run/shm
+none            3.9G   80K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             476G   90G  387G  19% /mnt/c
+tmpfs           779M   20K  779M   1% /run/user/1000
+vijeesh@5CD1220VXV:~$ df -T
+Filesystem     Type     1K-blocks     Used Available Use% Mounted on
+none           overlay    3985216        0   3985216   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none           tmpfs      3985216        4   3985212   1% /mnt/wsl
+drivers        9p       499120124 94127588 404992536  19% /usr/lib/wsl/drivers
+/dev/sdd       ext4    1055762868  2572900 999486496   1% /
+none           tmpfs      3985216       40   3985176   1% /mnt/wslg
+none           overlay    3985216        0   3985216   0% /usr/lib/wsl/lib
+rootfs         rootfs     3979460     2772   3976688   1% /init
+none           tmpfs      3985216      540   3984676   1% /run
+none           tmpfs      3985216        0   3985216   0% /run/lock
+none           tmpfs      3985216        0   3985216   0% /run/shm
+none           overlay    3985216       80   3985136   1% /mnt/wslg/versions.txt
+none           overlay    3985216       80   3985136   1% /mnt/wslg/doc
+C:\            9p       499120124 94127588 404992536  19% /mnt/c
+tmpfs          tmpfs       797040       20    797020   1% /run/user/1000
+vijeesh@5CD1220VXV:~$ findmnt
+TARGET               SOURCE   FSTYPE OPTIONS
+/                    /dev/sdd ext4   rw,relatime,discard,errors=remount-ro,data=ordered
+├─/usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+│                    none     overla rw,nosuid,nodev,noatime,lowerdir=/modules,upperdir=/lib/modules/6.18.33
+├─/mnt/wsl           none     tmpfs  rw,relatime
+├─/usr/lib/wsl/drivers
+│                    drivers  9p     ro,nosuid,nodev,noatime,aname=drivers;fmask=222;dmask=222,cache=0x5,acc
+├─/mnt/wslg          none     tmpfs  rw,relatime
+│ ├─/mnt/wslg/distro /dev/sdd ext4   ro,relatime,discard,errors=remount-ro,data=ordered
+│ ├─/mnt/wslg/versions.txt
+│ │                  none[/etc/versions.txt]
+│ │                           overla rw,relatime,lowerdir=/systemvhd,upperdir=/system/rw/upper,workdir=/syst
+│ ├─/mnt/wslg/doc    none[/usr/share/doc]
+│ │                           overla rw,relatime,lowerdir=/systemvhd,upperdir=/system/rw/upper,workdir=/syst
+│ └─/mnt/wslg/run/user/1000
+│                    tmpfs    tmpfs  rw,nosuid,nodev,relatime,size=797040k,nr_inodes=199260,mode=700,uid=100
+├─/usr/lib/wsl/lib   none     overla rw,nosuid,nodev,noatime,lowerdir=/gpu_lib_packaged:/gpu_lib_inbox,upper
+├─/init              rootfs[/init]
+│                             rootfs ro,size=3979460k,nr_inodes=994865
+├─/dev               none     devtmp rw,nosuid,relatime,size=3979460k,nr_inodes=994865,mode=755
+│ ├─/dev/pts         devpts   devpts rw,nosuid,noexec,noatime,gid=5,mode=620,ptmxmode=000
+│ ├─/dev/shm         none     tmpfs  rw,nosuid,nodev,noatime
+│ ├─/dev/mqueue      mqueue   mqueue rw,nosuid,nodev,noexec,relatime
+│ └─/dev/hugepages   hugetlbfs
+│                             hugetl rw,nosuid,nodev,relatime,pagesize=2M
+├─/sys               sysfs    sysfs  rw,nosuid,nodev,noexec,noatime
+│ ├─/sys/fs/cgroup   cgroup2  cgroup rw,nosuid,nodev,noexec,relatime,nsdelegate
+│ ├─/sys/kernel/debug
+│ │                  debugfs  debugf rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/kernel/tracing
+│ │                  tracefs  tracef rw,nosuid,nodev,noexec,relatime
+│ ├─/sys/fs/fuse/connections
+│ │                  fusectl  fusect rw,nosuid,nodev,noexec,relatime
+│ └─/sys/kernel/config
+│                    configfs config rw,nosuid,nodev,noexec,relatime
+├─/proc              proc     proc   rw,nosuid,nodev,noexec,noatime
+│ └─/proc/sys/fs/binfmt_misc
+│                    binfmt_misc
+│                             binfmt rw,relatime
+├─/run               none     tmpfs  rw,nosuid,nodev,mode=755
+│ ├─/run/lock        none     tmpfs  rw,nosuid,nodev,noexec,noatime
+│ ├─/run/shm         none     tmpfs  rw,nosuid,nodev,noatime
+│ └─/run/user        none     tmpfs  rw,nosuid,nodev,noexec,noatime,mode=755
+│   └─/run/user      none[/run/user]
+│                             tmpfs  rw,relatime
+│     └─/run/user/1000
+│                    tmpfs    tmpfs  rw,nosuid,nodev,relatime,size=797040k,nr_inodes=199260,mode=700,uid=100
+├─/tmp/.X11-unix     none[/.X11-unix]
+│                             tmpfs  ro,relatime
+├─/mnt/c             C:\      9p     rw,noatime,aname=drvfs;path=C:\;uid=1000;gid=1000;symlinkroot=/mnt/,cac
+└─/var/lib/docker    /dev/sdd[/var/lib/docker]
+                              ext4   rw,relatime,discard,errors=remount-ro,data=ordered
+vijeesh@5CD1220VXV:~$ uname -r
+6.18.33.2-microsoft-standard-WSL2
+vijeesh@5CD1220VXV:~$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+vijeesh@5CD1220VXV:~$ uptime
+ 22:51:42 up  1:09,  1 user,  load average: 0.00, 0.00, 0.00
+vijeesh@5CD1220VXV:~$
